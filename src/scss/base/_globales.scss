@@ -1,0 +1,53 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    background-color: v.$bgBody;
+    font-family: v.$fuenteSecundaria; //para parrafos
+    font-size: 1.6rem;
+
+    @include m.tablet { //768px
+        font-size: 1.8rem;
+    }
+}
+
+//media query para fontzsize en desktop
+
+[class$="contenedor"] {
+    max-width: 130rem;
+    width: 95%;
+    margin: 0 auto;
+    
+
+    @media(min-width: 1600px) {
+        max-width: 140rem;
+    }
+}
+
+[class*="seccion"] {
+    padding: 3.5rem 0;
+
+    @include m.tablet {
+        padding: 4rem 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,102 @@
+@use 'variables' as v; 
+
+/* Media Queries */
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin telefono-2 {
+    @media (min-width: v.$telefono-2) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-2 {
+    @media (min-width: v.$tablet-2) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-2 {
+    @media (min-width: v.$desktop-2) {
+        @content;
+    }
+}
+
+@mixin desktop-3 {
+    @media (min-width: v.$desktop-3) {
+        @content;
+    }
+}
+
+@mixin desktop-4 {
+    @media (min-width: v.$desktop-4) {
+        @content;
+    }
+}
+
+@mixin smartTv {
+    @media (min-width: v.$smartTv) {
+        @content;
+    }
+}
+
+/* Grid */
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin flex($direccion, $espaciado) {
+    display: flex;
+    flex-direction: $direccion;
+    gap: $espaciado;
+}
+
+/* btn */
+@mixin boton($bgColor, $colorTexto) {
+    background-color: transparent;
+    color: v.$secundario;
+    width: fit-content;
+    padding: 1rem 2.8rem; // desktop: 1.5rem 3.8rem
+    border-radius: 1rem;
+    border: 0.2rem solid v.$primario;
+    transition: .5s;
+    font-size: 1.6rem; //desktop 1.8rem
+    overflow: hidden;
+    &:hover {
+        border: 0.2rem solid v.$secundario;
+        color: v.$primario;
+    }
+    //Para otro hover //colocar un span vacio dentro del button
+    /* &:span { 
+        background-color: v.$primario;
+        height: 100%;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    &:hover span {
+        width: 100%;
+    } */
+
+}

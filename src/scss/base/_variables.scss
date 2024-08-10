@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+// Fuentes
+$fuentePrincipal: "Oswald", sans-serif; //Titulos
+$fuenteSecundaria: "Titillium Web", sans-serif; //Parrafos
+
+//Colores:
+$primario: #045640;
+$secundario: #fff;
+$bgBody: #181820;
+$bgFooter: rgb(4, 86, 64, .37); //al 37% de transparencia
+
+
+//Media Queries
+$telefono: 480px;
+$telefono-2: 665px;
+$tablet: 768px;
+$tablet-2: 992px;
+$desktop: 1024px;
+$desktop-2: 1280px;
+$desktop-3: 1440px;
+$desktop-4: 1665px;
+$smartTv: 2500px;
+
