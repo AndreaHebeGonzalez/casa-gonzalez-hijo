@@ -71,10 +71,11 @@
 
 /* btn */
 @mixin boton($bgColor, $colorTexto) {
+    display: block;
     background-color: transparent;
     color: v.$secundario;
     width: fit-content;
-    padding: 1rem 2.8rem; // desktop: 1.5rem 3.8rem
+    padding: .5rem 2.8rem; // desktop: 1.5rem 3.8rem
     border-radius: 1rem;
     border: 0.2rem solid v.$primario;
     transition: .5s;

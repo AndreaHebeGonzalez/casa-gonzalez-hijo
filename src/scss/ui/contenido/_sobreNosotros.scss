@@ -1,0 +1,95 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.nosotros {
+    &__flex {
+        @include m.grid(1, 4rem);
+        @include m.tablet { 
+            @include m.grid(1, 5rem);
+        }
+    }
+
+    &__informacion {
+        @include m.flex(column, 3rem);
+        @include m.desktop-2 { 
+            gap: 0;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__heading {
+        font-family: v.$fuentePrincipal;
+        font-weight: 700;
+        span {
+            @include m.desktop-2 { 
+                display: block;
+            }
+        }
+        @include m.tablet-2 { 
+            font-size: 5rem;
+        }
+    }
+
+    &__contenido {
+        @include m.grid(1, 3rem);
+        @include m.desktop-2 { 
+            max-width: 88.9rem;
+        }
+        @include m.desktop-2 { 
+            @include m.grid(1, 4rem);
+        }
+    }
+
+    &__link {
+        @include m.boton(v.$primario, v.$secundario);
+        @include m.desktop-2 { 
+            padding: .5rem 4rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__items {
+        @include m.grid(1, 1rem);
+
+        @include m.desktop { 
+            @include m.grid(2, 4.2rem);
+        }
+    }
+    &__items-item {
+        display: grid;
+        gap: 1rem;
+        @include m.desktop { 
+            gap: 3rem;
+        }
+    }
+    &__items-contenido {
+        @include m.flex(column, 1.5rem);
+        padding: .5rem 1rem;
+        height: 18rem;
+        border-radius: 1rem;
+        background-color: transparentize(v.$primario, 0.87);
+        @include m.tablet { 
+            padding: 2.5rem;
+            @include m.flex(column, 2rem);
+            height: 22rem;
+        }
+    }
+
+    &__items-titulo {
+        color: v.$primario;
+        font-family: v.$fuentePrincipal;
+        font-size: 2.5rem;
+        font-weight: 700;
+        @include m.tablet { 
+            font-size: 3.8rem;
+        }
+    }
+
+    &__items-parrafo {
+        font-size: 1.6rem;
+        @include m.tablet { 
+            font-size: 2rem;
+        }
+    }
+}

@@ -8,7 +8,6 @@
 h1 { //colocar span para "nuevo modelo" /<h1><span>Nuevo Modelos</span>Fusil FFF</h1>
     font-size: 4rem;
     font-weight: 500;
-    color: v.$negro;
 
     @include m.tablet {
         font-size: 7rem;
