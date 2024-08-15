@@ -8,7 +8,129 @@
   <body>
     <div id="app" data-scroll-container>
       <header class="header">
-        
+        <div class="header__barra contenedor">
+          <div class="header__contacto">
+            <a class="header__icono" href="#">
+              <img class="header__icono-img" src="./src/assets/iconos/ico-facebook.svg" alt="Facebook">
+            </a>
+            <a class="header__icono" href="#">
+              <img class="header__icono-img" src="./src/assets/iconos/ico-whatsapp.svg" alt="ico-whatsapp">
+            </a>
+            <p class="header__telefono">+54 3489-459841</p>
+          </div>
+          
+          <figure class="header__logo">
+            <img class="header__logo-img" src="./src/assets/img/logo.png" alt="logo">
+          </figure>
+          
+          <div class="header__menu"> 
+            <div class="header__menu-abrir"> 
+              <img class="header__menu-icono" src="src/assets/iconos/menu-abrir.svg" alt="Icono menu">
+            </div>
+            <div class="header__menu-contenido">
+              <div class="header__menu-top">
+                <p></p>
+                <div class="header__menu-cerrar">
+                  <img class="header__menu-icono" src="src/assets/iconos/menu-cerrar.svg" alt="Icono menu">
+                </div>
+              </div>
+              <nav class="nav">
+                <ul class="nav__lista"> <!-- menu-principal > inicio, nosotros, productos, blog, contacto -->
+                  <li class="nav__item">                   
+                      <a href="#" class="nav__link">INICIO</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">NOSOTROS</a>
+                  </li>
+                  <li id="productos" class="nav__item"> <!-- !Despliega -->
+                    <div class="nav__btn-abrir">
+                      <a href="#" class="nav__link">PRODUCTOS</a>
+                      <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                    </div>
+                    <ul class="nav__submenu nav__submenu--nivel1"> <!-- PRIMER SUBNIVEL > Fusiles, Accesorios, Componentes -->
+                      <li class="nav__submenu-item"> 
+                        <div class="nav__btn-abrir"> <!-- !Despliega -->
+                          <a href="#" id="fusiles" class="nav__link">Fusiles</a> <!--Redirige a fusiles --> 
+                          <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                        </div>
+                        <ul class="nav__submenu nav__submenu--nivel2"> <!--  SEGUNDO SUBNIVEL Tactico, Clase-F, Varmint -->
+                          <li class="nav__submenu-item">
+                            <div class="nav__btn-abrir"> <!-- !Despliega -->
+                              <a href="#" class="nav__link">Tácticos</a>
+                              <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                            </div>
+                            <ul class="nav__submenu nav__submenu--nivel3">  <!--  TERCER SUBNIVEL nivel de modelos -->
+                              <li class="nav__submenu-item">
+                                <a href="#" class="nav__link">Modelo-1</a>
+                              </li>
+                              <li class="nav__submenu-item">
+                                <a href="#" class="nav__link" >Modelo-2</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav__submenu-item">
+                            <a href="#" class="nav__link">Clase-F</a>
+                          </li>
+                          <li class="nav__submenu-item">
+                            <a href="#" class="nav__link">Varmint</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__submenu-item"> 
+                        <div class="nav__btn-abrir"> <!-- !Despliega -->
+                          <a href="#" class="nav__link nav__link--mostrar">Accesorios</a> <!-- Redirige a accesorios --> 
+                          <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                        </div>
+                        <ul class="nav__submenu nav__submenu--nivel2"> <!-- SEGUNDO SUBNIVEL Bipodes -->
+                          <li class="nav__submenu-item">
+                            <div class="nav__btn-abrir"> <!-- !Despliega -->
+                              <a href="#" class="nav__link">Bípodes</a>
+                              <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                            </div>
+                            <ul class="nav__submenu nav__submenu--nivel3"> <!-- TERCER SUBNIVEL modelos -->
+                              <li class="nav__submenu-item">
+                                <a href="#" class="nav__link">Modelo-1</a>
+                              </li>
+                              <li class="nav__submenu-item">
+                                <a href="#" class="nav__link">Modelo-2</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__submenu-item nav__submenu-item--mostrar"> 
+                        <div class="nav__btn-abrir"> <!-- !Despliega -->
+                          <a href="#" class="nav__link">Componentes</a>
+                          <img class="nav__arrow" src="./src/assets/iconos/ico-arrow-right.svg">
+                        </div>
+                        <ul class="nav__submenu nav__submenu--nivel2"> 
+                          <li class="nav__submenu-item">
+                            <a href="#" class="nav__link">Anillas de sujeción</a>
+                          </li>
+                          <li class="nav__submenu-item">
+                            <a href="#" class="nav__link">Rieles Picatiny</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">BLOG</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">CONTACTO</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__hero">
+          <div class="header__hero-contenido contenedor">
+              <h1 class="header__hero-heading"><span><span>Nuevo </span>modelo</span>Fusil MMM</h1>
+              <button class="header__btn-light">Ver producto <span></span></button>
+          </div>
+        </div>
       </header>
     </div>
 

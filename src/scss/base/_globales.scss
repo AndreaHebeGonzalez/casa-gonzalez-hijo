@@ -9,7 +9,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
 }
 
 body {
@@ -36,11 +36,15 @@ body {
 }
 
 [class*="seccion"] {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 
     @include m.tablet {
         padding: 4rem 0;
     }
+}
+
+.d-none {
+    display: none;
 }
 
 img {

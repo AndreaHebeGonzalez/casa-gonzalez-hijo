@@ -1,6 +1,13 @@
 @use 'variables' as v; 
 
 /* Media Queries */
+
+@mixin mq($valor) {
+    @media (min-width: $valor) {
+        @content;
+    }
+}
+
 @mixin telefono {
     @media (min-width: v.$telefono) {
         @content;
@@ -76,27 +83,10 @@
     width: fit-content;
     padding: 1rem 2.8rem; // desktop: 1.5rem 3.8rem
     border-radius: 1rem;
-    border: 0.2rem solid v.$primario;
+    border: 0.1rem solid v.$primario;
     transition: .5s;
     font-size: 1.6rem; //desktop 1.8rem
     overflow: hidden;
-    &:hover {
-        border: 0.2rem solid v.$secundario;
-        color: v.$primario;
-    }
-    //Para otro hover //colocar un span vacio dentro del button
-    /* &:span { 
-        background-color: v.$primario;
-        height: 100%;
-        width: 0;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        transition: 0.5s;
-    }
-    &:hover span {
-        width: 100%;
-    } */
+    cursor: pointer;
 
 }
