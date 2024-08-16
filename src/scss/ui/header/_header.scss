@@ -3,7 +3,7 @@
 
 
 .header {
-    min-height: 80vh;
+    min-height: 50vh;
     display: grid;
     grid-template-rows: auto 1fr;
 
@@ -155,7 +155,7 @@
         @include m.flex(row, 0);
         justify-content: space-between;
         align-items: center;
-        padding: 2rem 2.5rem;
+        padding: 2rem;
         /* background-color: lighten(v.$bgBody, 2%); */
 
         @include m.desktop-2 {
@@ -224,6 +224,7 @@
         position: relative;
     }
 
+    
     &__btn-abrir {
         @include m.flex(row, 0);
         justify-content: space-between;
@@ -289,11 +290,11 @@
         }
 
 
-        /* a {
+        a {
             @include m.desktop-2 {
                 margin: 1rem 0;
             }
-        } */
+        }
     }
 
     &__submenu--nivel2 {
