@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const iconoAbrir = document.querySelector('.header__menu-abrir'),
+    const barraHeader = document.querySelector('.header__barra'),
+    iconoAbrir = document.querySelector('.header__menu-abrir'),
     menuBox = document.querySelector('.header__menu-contenido'),
-    listaNav = menuBox.querySelector('.nav__lista'), 
     menuCerrar = document.querySelector('.header__menu-cerrar'),
     listaBtns = document.querySelectorAll('.nav__btn-abrir');
 
@@ -70,9 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia("(min-width: 1280px)").matches) {
         console.log('desktop')
         listaBtns.forEach(btn => btn.addEventListener('mouseover', () => menuDesktop(btn)));
-        listaNav.addEventListener('mouseleave', () => {
-            listaNav.querySelectorAll('.nav__submenu').forEach(ulHijo => ulHijo.style.display = 'none');
-        })
+        barraHeader.addEventListener('click', () => barraHeader.querySelectorAll('.nav__submenu').forEach(ulHijo => ulHijo.style.display = 'none'));
     } else {
         console.log('mobile')
         listaBtns.forEach(btn => btn.addEventListener('click', () => menuMobile(btn)));

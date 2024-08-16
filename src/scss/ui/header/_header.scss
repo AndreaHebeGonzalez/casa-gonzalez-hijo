@@ -15,7 +15,7 @@
     &__barra {
         position: relative;
         padding: 2.5rem 0;
-        display: flex;
+        @include m.flex(row, 0);
         justify-content: space-between;
 
         &::after {
@@ -208,11 +208,9 @@
         padding: 0
     }
 
-
     &__lista {
         height: 100%;
         @include m.flex(column, initial);
-
 
         @include m.desktop-2 {
             @include m.flex(row, 1.5rem);
@@ -224,12 +222,24 @@
         position: relative;
     }
 
-    
+    &__item--despliega > &__btn-abrir > img {
+
+        @include m.desktop-2 {
+            display: none;
+        }
+    }
+
     &__btn-abrir {
+
         @include m.flex(row, 0);
         justify-content: space-between;
         align-items: center;
         transition: all .3s;
+        height: min-content;
+
+        @include m.desktop-2 {
+            gap: 1rem;
+        }
     }
 
     &__link {
@@ -237,6 +247,7 @@
         color: v.$secundario;
         font-size: 1.6rem;
         margin: 1rem 0;
+        line-height: normal;
 
         @include m.desktop-2 {
             margin: 0;
@@ -251,36 +262,32 @@
         width:2rem;
         height: 2rem;
         transition: transform .3s;
-
-
-        @include m.desktop-2 {
-            display: none;
-        }
     }
 
     &__submenu {
         @include m.flex(column, 0);
-        border-left: 1px solid darken(v.$secundario, 60%) ;
+        border-left: 1px solid darken(v.$secundario, 60%);
         height: 0;
         overflow: hidden;
         transition: height .4s;
 
         @include m.desktop-2 {
-            padding: 2rem;
-            gap: 2rem;
+            padding: 1.2rem;
             height: auto;
             position: absolute;
-            width: 22rem;
+            width: 20rem;
             border: none;
-            background-color: v.$bgBody;
+            background-color: lighten(v.$bgBody, 3%);
             overflow: visible;
             border-radius: 0.5rem;
             display: none;
+
         }
 
         li {
             width: 90%;
             margin-left: auto;
+            padding-top: 0.1px;
 
             @include m.desktop-2 {
                 width:  100%;
@@ -289,21 +296,39 @@
             }
         }
 
-
         a {
+            transition: transform .3s ease;
+
             @include m.desktop-2 {
-                margin: 1rem 0;
+                margin: 0.8rem 0;
             }
         }
     }
 
-    &__submenu--nivel2 {
-        right: 200px;
+    &__submenu--nivel1 {
+        @include m.desktop-2 {
+            top: calc(100% + 4.3rem);
+            left: 110%;
+            transform: translateX(-50%);
+        }
     }
 
+    &__submenu--nivel2,
     &__submenu--nivel3 {
-        top: 0;
-        right: 200px;
+        @include m.desktop-2 {
+            top: 0;
+            right: -215px;
+            display: none;
+        }
     }
+
+    &__submenu-item a:hover {
+        transform: translateX(10px);
+    }
+
+    &__submenu-item--despliega > &__btn-abrir:hover a {
+        transform: translateX(10px);
+    }
+
 }
 
