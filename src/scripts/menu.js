@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listaBtns = document.querySelectorAll('.nav__btn-abrir');
 
     const menuToggle = (desplegar) => {
-        menuBox.style.transform = desplegar ? 'translateX(0)' : 'translateX(100%)';
+        menuBox.style.transform = desplegar ? 'translateX(0)' : 'translateX(-100%)';
     }
 
     iconoAbrir.addEventListener('click', () => menuToggle(true));
@@ -66,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         recorrer(submenu, hermanoPosteriorLi, false); 
     };
 
-
-
     if (window.matchMedia("(min-width: 1280px)").matches) {
         console.log('desktop')
         listaBtns.forEach(btn => btn.addEventListener('mouseover', () => menuDesktop(btn)));
@@ -88,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('mobile')
         listaBtns.forEach(btn => btn.addEventListener('click', () => menuMobile(btn)));
     };
+
+
 });
 
 
