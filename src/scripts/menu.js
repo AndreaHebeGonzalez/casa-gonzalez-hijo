@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const barraHeader = document.querySelector('.header__barra'),
-    iconoAbrir = document.querySelector('.header__menu-abrir'),
+    const iconoAbrir = document.querySelector('.header__menu-abrir'),
     menuBox = document.querySelector('.header__menu-contenido'),
     menuCerrar = document.querySelector('.header__menu-cerrar'),
     listaBtns = document.querySelectorAll('.nav__btn-abrir');
@@ -67,10 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
         recorrer(submenu, hermanoPosteriorLi, false); 
     };
 
+
+
     if (window.matchMedia("(min-width: 1280px)").matches) {
         console.log('desktop')
         listaBtns.forEach(btn => btn.addEventListener('mouseover', () => menuDesktop(btn)));
-        barraHeader.addEventListener('click', () => barraHeader.querySelectorAll('.nav__submenu').forEach(ulHijo => ulHijo.style.display = 'none'));
+
+        let cerrarMenuTimeout;
+
+        menuBox.addEventListener('mouseleave', () => {
+            cerrarMenuTimeout = setTimeout(() => {
+                menuBox.querySelectorAll('.nav__submenu').forEach(ulHijo => ulHijo.style.display = 'none');
+            }, 300); 
+        });
+
+        menuBox.addEventListener('mouseenter', () => {
+            clearTimeout(cerrarMenuTimeout);
+        });
+
     } else {
         console.log('mobile')
         listaBtns.forEach(btn => btn.addEventListener('click', () => menuMobile(btn)));
