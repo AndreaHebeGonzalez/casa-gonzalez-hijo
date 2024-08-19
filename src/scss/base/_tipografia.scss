@@ -37,7 +37,7 @@ h2 {
     font-weight: 700;
     font-size: 4rem;
     color: v.$secundario;
-
+    
     @include m.tablet {
         font-size: 5rem;
     }

@@ -1,0 +1,81 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.productos {
+    &__heading {
+        text-align: center;
+        font-size: 3rem;
+        font-family: v.$fuentePrincipal;
+        margin-bottom: 3rem;
+        @include m.telefono-2 { 
+            font-size: 4rem;
+        }
+        @include m.tablet { 
+            font-size: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__contenido {
+        margin-bottom: 3rem;
+        @include m.flex(column, 1.5rem);
+        align-items: center;
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+        @media(min-width: 1120px) {
+            margin-bottom: 6rem;
+            @include m.flex(row, 6.5rem);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 1rem;
+        filter: brightness(0.7); 
+        @include m.desktop { 
+            width: 74.8rem;
+        }
+    }
+
+    &__img-accesorios {
+        @media(min-width: 1120px) {
+            order: 1;
+        }
+    }
+
+    &__informacion {
+        @include m.flex(column, 1rem);
+        align-items: center;
+        @media(min-width: 1120px) {
+            @include m.flex(column, 2rem);
+            align-items: flex-start;
+        }
+    }
+    &__titulo {
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: v.$fuentePrincipal;
+        @include m.tablet { 
+            font-size: 4rem;
+        }
+    }
+    &__texto {
+        text-align: center;
+        font-size: 1.6rem;
+        @include m.tablet { 
+            font-size: 2.2rem;
+        }
+        @media(min-width: 1120px) {
+             text-align: initial;
+        }
+    }
+    &__enlace {
+        font-size: 1.6rem;
+        @include m.boton(v.$primario, v.$secundario);
+        @include m.tablet { 
+            font-size: 1.8rem;
+            padding: .5rem 4rem;
+        }
+    }
+}
