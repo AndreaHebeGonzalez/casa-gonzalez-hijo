@@ -3,14 +3,21 @@
 
 
 .header {
-    min-height: 50vh;
+    min-height: 65vh;
     display: grid;
     grid-template-rows: auto 1fr;
+
+    @include m.telefono-2 {
+        min-height: 70vh;
+    }
+
+    @include m.tablet {
+        min-height: 80vh;
+    }
 
     @include m.tablet-2 {
         min-height: 95vh;
     }
-    
 
     &__barra {
         position: relative;
@@ -36,7 +43,6 @@
             @include m.tablet-2 {
                 width: 30rem;
             }
-            
         }
 
         @include m.tablet-2 {
@@ -179,8 +185,13 @@
 
     &__hero-contenido {
         height: 100%;
-        @include m.flex(column, 2rem);
+        @include m.flex(column, 1.5rem);
         justify-content: center;
+
+
+        @include m.telefono-2 {
+            gap: 2rem;
+        }
     }
 
     &__btn-light {
