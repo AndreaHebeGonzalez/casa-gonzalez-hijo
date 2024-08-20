@@ -2,9 +2,9 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#app'),
-    smooth: true, //desplazamiento activado
+    smooth: true, 
     multiplier: 1,
-    lerp: 0.1, //suavidad del desplazamiento
+    lerp: 0.06, //suavidad del desplazamiento
 });
 
 export function updateScroll() {

@@ -6,17 +6,22 @@
     min-height: 65vh;
     display: grid;
     grid-template-rows: auto 1fr;
+    margin-bottom: 4rem;
 
     @include m.telefono-2 {
         min-height: 70vh;
     }
 
-    @include m.tablet {
+    @include m.tablet { //768
         min-height: 80vh;
     }
 
-    @include m.tablet-2 {
+    @include m.tablet-2 { //992
         min-height: 95vh;
+    }
+    
+    @include m.desktop { //992
+        min-height: 100vh;
     }
 
     &__barra {
@@ -177,7 +182,7 @@
     }
     
     &__hero {
-        background-image: url(../assets/img/bg-1.jpg);
+        background-image: url(../assets/img/bg-1.webp);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -190,7 +195,7 @@
 
 
         @include m.telefono-2 {
-            gap: 2rem;
+            gap: 3rem;
         }
     }
 

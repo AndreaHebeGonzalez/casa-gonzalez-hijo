@@ -8,7 +8,7 @@
   <body>
     <div id="app" data-scroll-container>
       <header class="header">
-        <div class="header__barra contenedor">
+        <div class="header__barra contenedor-2">
           <div class="header__menu"> 
             <div class="header__menu-abrir"> 
               <img class="header__menu-icono" src="src/assets/iconos/menu-abrir.svg" alt="Icono menu">
@@ -112,7 +112,7 @@
             </div>
           </div>
           <figure class="header__logo">
-            <img class="header__logo-img" src="./src/assets/img/logo.png" alt="logo">
+            <img class="header__logo-img" src="./src/assets/img/logo.webp" alt="logo">
           </figure>
           <div class="header__contacto">
             <a class="header__icono" href="#">
@@ -125,9 +125,13 @@
           </div>
         </div>
         <div class="header__hero">
-          <div class="header__hero-contenido contenedor">
-              <h1 class="header__hero-heading"><span><span>Nuevo </span>modelo</span>Fusil MMM</h1>
-              <button class="header__btn-light">Ver producto <span></span></button>
+          <div class="header__hero-contenido contenedor-2">
+              <h1 class="header__hero-heading">
+                <span><span>Nuevo</span> modelo</span>
+                <br>
+                Fusil MMM
+              </h1>
+              <button class="header__btn-light btn-hero">Ver producto <span></span></button>
           </div>
         </div>
       </header>
@@ -174,7 +178,7 @@
         <section class="productos seccion contenedor">
           <h2 class="productos__heading"><span>Nuestros</span> productos</h2>
           <div class="productos__contenido">
-            <img class="productos__img" src="src/assets/fusiles/fusil-1.jpg" alt="Imagen de fusil">
+            <img class="productos__img" src="src/assets/img/fusiles/fusil-1.webp" alt="Imagen de fusil">
             <div class="productos__informacion">
               <h3 class="productos__titulo">Fusiles</h3>
               <p class="productos__texto">Cada componente de nuestros fusiles es fabricado en nuestras instalaciones, utilizando procesos de mecanizado CNC de última generación y software de diseño por computadora</p>
@@ -182,7 +186,7 @@
             </div>
           </div>
           <div class="productos__contenido">
-            <img class="productos__img productos__img-accesorios" src="src/assets/accesorios/accesorios-1.jpg" alt="Imagen de accesorios">
+            <img class="productos__img productos__img-accesorios" src="src/assets/img/accesorios/accesorios-1.webp" alt="Imagen de accesorios">
             <div class="productos__informacion">
               <h3 class="productos__titulo">Accesorios</h3>
               <p class="productos__texto">Cada componente de nuestros fusiles es fabricado en nuestras instalaciones, utilizando procesos de mecanizado CNC de última generación y software de diseño por computadora</p>
@@ -190,7 +194,7 @@
             </div>
           </div>
           <div class="productos__contenido">
-            <img class="productos__img" src="src/assets/componentes/componentes-1.jpg" alt="Imagen de componentes">
+            <img class="productos__img" src="src/assets/img/componentes/componentes-1.webp" alt="Imagen de componentes">
             <div class="productos__informacion">
               <h3 class="productos__titulo">Componentes del fusil</h3>
               <p class="productos__texto">Cada componente de nuestros fusiles es fabricado en nuestras instalaciones, utilizando procesos de mecanizado CNC de última generación y software de diseño por computadora</p>
@@ -200,6 +204,7 @@
         </section>
       </main>
     </div>
+    <script src="https://unpkg.com/split-type"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
