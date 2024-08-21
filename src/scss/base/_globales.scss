@@ -47,46 +47,22 @@ body {
 }
 
 [class*="seccion"] {
-    padding: 3rem 0; //60
+    padding: 3rem 0; 
 
     @include m.tablet {
-        padding: 4rem 0; //80
+        padding: 4rem 0; 
     }
 
     @include m.desktop {
-        padding: 4.5rem 0; //90
+        padding: 4.5rem 0; 
     }
 
     @include m.desktop-2 {
-        padding: 5rem 0; //100
+        padding: 5rem 0; 
     }
 
     @include m.desktop-3 {
-        padding: 6rem 0; //120
-    }
-}
-
-[class*="seccion-inner"] {
-    padding-bottom: 1rem 0; //20
-
-    @include m.telefono {
-        padding-bottom: 1.25rem 0; //25
-    }
-
-    @include m.tablet {
-        padding-bottom: 1.5rem 0; //30
-    }
-
-    @include m.desktop {
-        padding-bottom: 1.75rem 0; //35
-    }
-
-    @include m.desktop-2 {
-        padding-bottom: 1.75rem 0; //35
-    }
-
-    @include m.desktop-3 {
-        padding-bottom: 2.25rem 0; //45
+        padding: 6rem 0; 
     }
 }
 

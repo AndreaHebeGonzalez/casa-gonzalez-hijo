@@ -6,22 +6,32 @@
     min-height: 65vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 
     @include m.telefono-2 {
         min-height: 70vh;
     }
 
-    @include m.tablet { //768
+    @include m.tablet { 
         min-height: 80vh;
+        margin-bottom: 4rem;
     }
 
-    @include m.tablet-2 { //992
+    @include m.tablet-2 { 
         min-height: 95vh;
     }
     
-    @include m.desktop { //992
+    @include m.desktop { 
         min-height: 100vh;
+        margin-bottom: 4.5rem;
+    }
+
+    @include m.desktop-2 {
+        margin-bottom: 5rem;
+    }
+
+    @include m.desktop-3 {
+        margin-bottom: 6rem;
     }
 
     &__barra {
@@ -91,7 +101,7 @@
 
         & img {
             width: 100%;
-            height: auto
+            height: auto;
         }
     }
 
@@ -186,6 +196,17 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        animation: zoomBackground 25s infinite linear; 
+    }
+
+
+    @keyframes zoomBackground {
+        0% {
+            background-size: 100%; 
+        }
+        100% {
+            background-size: 130%; 
+        }
     }
 
     &__hero-contenido {
